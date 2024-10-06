@@ -1,0 +1,364 @@
+/*General*/
+:root{
+    --border: 1px red solid;
+    --dark-gray:#333;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: "Poppins";
+    font-size: 16px;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*Font sizes*/
+nav a{
+    font-size: 1.33rem;
+}
+.mobile-nav a{
+    font-size: 1.77rem;
+}
+h2{
+    font-size: 2.369rem;
+    margin-bottom: 2.369rem;
+}
+h3{
+    font-size: 1.33rem;
+    padding: 1.33rem 0;
+}
+/*Any .link animation*/
+.link {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+.link::after {
+	content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: white;
+    transition: opacity 300ms, transform 300ms;
+    transform: scale(0);
+}
+.link::after {
+	opacity: 1;
+	transform: scale(0);
+	transform-origin: center;
+}
+.link:hover::after,
+.link:focus::after{
+	transform: scale(1);
+}
+
+
+
+/*Mobile nav*/
+.toggle-button{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+}
+.toggle-button:hover .bar{
+    background-color: hotpink;
+}
+.bar.active:nth-child(1){
+    transform: rotate(45deg);
+    transform-origin: 0 50%;
+}
+.bar.active:nth-child(3){
+    transform: rotate(-45deg);
+    transform-origin: 0 50%;
+}
+.bar.active:nth-child(2){
+    opacity: 0;
+}
+.bar{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: transform 300ms, opacity 300ms;
+}
+.mobile-nav{
+    min-height: 100vh;
+    align-items: center;
+    display: none;
+}
+.mobile-nav.active{
+    display: flex;
+}
+.mobile-nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.mobile-nav a{
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 600;
+    display: block;
+    padding: 3vh;
+ }
+.mobile-nav a:hover{
+    color: hotpink;
+}
+@media (width >= 800px){
+    .toggle-button{
+     display: none;
+    }
+ }
+
+/*Desktop Navigation*/
+header{
+    min-height: 100vh;
+    background: url(Images/Ramen3D.png),  rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.name{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    color: white;
+    font-size: 100px;
+    text-wrap: wrap;
+    text-align: center;
+}
+nav{
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+@media (width <= 1300px) {
+    nav{
+        padding-right:5%;
+    }
+    header h1{
+        padding: 0 5% 0 5%;
+    }
+}
+@media (width <= 1000px){
+    header h1{
+        text-align: center;
+    }
+}
+@media (width <= 800px){
+    header h1{
+        font-size: 15vw;
+    }
+    header{
+        min-height: 50vh;
+    }
+    nav{
+        display: none;
+    }
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    margin: 0 30px;
+    align-items: center;
+    display: flex;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+/*Hover animation*/
+.nav-link::after {
+	content:'';
+    position: absolute;
+    bottom: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: white;
+    transition: opacity 300ms, transform 300ms;
+}
+.nav-link::after {
+	opacity: 1;
+	transform: scale(0);
+	transform-origin: center;
+}
+.nav-link:hover::after,
+.nav-link:focus::after{
+	transform: scale(1);
+}
+
+
+
+/*About me*/
+.about-me{
+    background-color: #1a1a1a;
+    color: white;
+}
+.about-me article{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 10% 0;
+}
+.about-me img{
+    width: 400px;
+    rotate: -6deg;
+    object-fit: contain;
+}
+.text{
+    width: 60%;
+}
+
+@media (width <= 1300px) {
+    .about-me article{
+        margin: 0 6% 0 6%;
+    }
+    .about-me img{
+        width: 30%;
+    }
+}
+@media (width <= 1000px){
+    .about-me article{
+        flex-direction: column;
+    }
+    .about-me img{
+        width: 50%;
+        margin-bottom: 10%;
+        padding-left: 10px;
+    }
+    .text{
+        width: 100%;
+    }
+}
+@media (width <= 800px){
+    .about-me img{
+        width: 60%;
+    }
+}
+
+
+
+/*What I do*/
+.what-i-do{
+    color: #1a1a1a;
+}
+.what-i-do article{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10% 0;
+}
+.what-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.what-article{
+    max-width: 30%;
+}
+.what-article img{
+    width: 100%;
+}
+
+@media (width <= 1300px) {
+    .what-i-do article{
+        margin: 0 6% 0 6%;
+    }
+}
+@media (width <= 1000px){
+    .what-row{
+        flex-direction: column;
+    }
+    .what-article{
+        max-width: 100%;
+        padding-bottom: 10%;
+    }
+    .what-article img{
+        width: 100%;
+        max-height: 50vh;
+        object-fit: cover;
+    }
+}
+@media (width <= 800px){
+    .what-article{
+        padding-bottom: 15%;
+    }
+    .what-article img{
+        width: 100%;
+        max-height: 40vh;
+        object-fit: cover;
+    }
+}
+
+
+
+/*Get in touch*/
+.contact{
+    background-color: #1a1a1a;
+    color: white;
+}
+.contact article{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10% 0 15% 0;
+   
+}
+.icons{
+    margin:30px 0;
+}
+.icons img{
+    width: 50px;
+    margin-right: 50px;
+    transition: scale 300ms;
+}
+.icons img:hover{
+    scale: 1.2;
+}
+@media (width <= 1300px) {
+    .contact article{
+        margin: 0 6% 0 6%;
+    }
+}
+
+
+
+/*Footer*/
+footer{
+    background-color: #1a1a1a;
+}
+.footer-div{
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    padding-bottom: 3%;
+}
+@media (width <= 1300px) {
+    .footer-div{
+        margin: 0 6% 0 6%;
+        padding-bottom: 6%;
+    }
+}
