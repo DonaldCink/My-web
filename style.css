@@ -8,7 +8,6 @@
     padding: 0;
     box-sizing: border-box; 
     font-family: "Poppins";
-    font-size: 16px;
 }
 html{
     scroll-behavior: smooth;
@@ -136,8 +135,10 @@ header{
     align-items: center;
 }
 header h1{
+    text-transform: uppercase;
+    font-weight: bold;
     color: white;
-    font-size: 100px;
+    font-size: 7rem;
     text-wrap: wrap;
     text-align: center;
 }
@@ -162,7 +163,7 @@ nav{
 }
 @media (width <= 800px){
     header h1{
-        font-size: 15vw;
+        font-size: 16vw;
     }
     header{
         min-height: 50vh;
@@ -225,7 +226,7 @@ nav a{
     align-items: top;
     padding: 10% 0;
 }
-.about-me img{
+.me-pic{
     width: 400px;
     rotate: -6deg;
     object-fit: contain;
@@ -233,12 +234,32 @@ nav a{
 .text{
     width: 60%;
 }
+#CV-btn-wrap{
+    margin-top: 3.369rem;
+}
+#CV-btn{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: #e82a57;
 
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
+#CV-btn:hover{
+    background-color: #d40b3a;
+}
+#CV-btn-wrap img{
+    width: 1.5rem;
+    margin-right: 1rem;
+}
 @media (width <= 1300px) {
     .about-me article{
         margin: 0 6% 0 6%;
     }
-    .about-me img{
+    .me-pic{
         width: 30%;
     }
 }
@@ -246,7 +267,7 @@ nav a{
     .about-me article{
         flex-direction: column;
     }
-    .about-me img{
+    .me-pic{
         width: 50%;
         margin-bottom: 10%;
         padding-left: 10px;
@@ -256,7 +277,7 @@ nav a{
     }
 }
 @media (width <= 800px){
-    .about-me img{
+    .me-pic{
         width: 60%;
     }
 }

@@ -12,31 +12,19 @@ toggleButton.addEventListener('click', () => {
     }
 
     if (mobileNav.classList.contains('active')) {
-        toggleButton.addEventListener('mouseover', () => {
-            for (let i = 0; i < bars.length; i++) {
-                bars[i].style.backgroundColor = "hotpink"; // Hover color
-            }
-        });
-    
-        toggleButton.addEventListener('mouseout', () => {
-            for (let i = 0; i < bars.length; i++) {
-                bars[i].style.backgroundColor = "#1a1a1a"; 
-            }
-        });
+       
+        for (let i = 0; i < bars.length; i++) {
+            bars[i].style.backgroundColor = "#1a1a1a"; // Hover color
+        }
+
         body.style.overflow = 'hidden'; //When mobile nav active disable scroll
     } 
     else {
-        toggleButton.addEventListener('mouseover', () => {
-            for (let i = 0; i < bars.length; i++) {
-                bars[i].style.backgroundColor = "hotpink"; // Hover color
-            }
-        });
-    
-        toggleButton.addEventListener('mouseout', () => {
-            for (let i = 0; i < bars.length; i++) {
-                bars[i].style.backgroundColor = "white"; //Normal color
-            }
-        });
+
+        for (let i = 0; i < bars.length; i++) {
+            bars[i].style.backgroundColor = "white"; // Hover color
+        }
+
         body.style.overflow = 'auto';
     }
 });
@@ -56,18 +44,6 @@ for (let i = 0; i < mobileLinks.length; i++){ //If click on a link enable scroll
         for (let i = 0; i < bars.length; i++) {
             bars[i].style.backgroundColor = "white"; //Initial color white
         }
-        
-        toggleButton.addEventListener('mouseover', () => {
-            for (let i = 0; i < bars.length; i++) {
-                bars[i].style.backgroundColor = "hotpink"; // Hover color
-            }
-        });
-        
-        toggleButton.addEventListener('mouseout', () => {
-            for (let i = 0; i < bars.length; i++) {
-                bars[i].style.backgroundColor = "white"; //Normal color white
-            }
-        });
     });
 }
 
