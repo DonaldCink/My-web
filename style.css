@@ -13,7 +13,7 @@ html{
     scroll-behavior: smooth;
 }
 /*Font sizes*/
-nav a{
+nav a, .lang{
     font-size: 1.33rem;
 }
 .mobile-nav a{
@@ -68,8 +68,14 @@ h3{
     width: 40px;
     height: 30px;
 }
-.toggle-button:hover .bar{
-    background-color: hotpink;
+.mobile-lang-toggle{
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.mobile-lang.current{
+    color: hotpink;
 }
 .bar.active:nth-child(1){
     transform: rotate(45deg);
@@ -142,15 +148,45 @@ header h1{
     text-wrap: wrap;
     text-align: center;
 }
+.nav-wrap{
+    display: flex;
+    max-width: 1200px;
+    margin: 0  auto;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+/*Language toggle*/
+.lang-toggle{
+    display: flex;
+    color: white;
+}
+.lang:first-child{
+    margin-right: 2rem;
+}
+.lang{
+    padding: 0.5rem 1rem;
+    border: 2px white solid;
+    border-radius: 50px;
+    align-self: center;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.lang.current{
+    background-color: white;
+    color: #1a1a1a;
+}
+    
 nav{
     color: white;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 60px;
 }
 @media (width <= 1300px) {
     nav{
         padding-right:5%;
+    }
+    .lang-toggle{
+        padding-left: 5%;
     }
     header h1{
         padding: 0 5% 0 5%;
@@ -161,6 +197,16 @@ nav{
         text-align: center;
     }
 }
+@media (width <= 900px){
+    .nav-wrap{
+        flex-direction: column;
+        align-items: end;
+    }
+    .lang-toggle{
+        padding-right: 8%;
+        padding-bottom: 3%;
+    }
+}
 @media (width <= 800px){
     header h1{
         font-size: 16vw;
@@ -168,12 +214,12 @@ nav{
     header{
         min-height: 50vh;
     }
-    nav{
+    .nav-wrap{
         display: none;
     }
 }
 nav ul{
-    width: 100%;
+    width: fit-content;
     list-style: none;
     display: flex;
     justify-content: right;

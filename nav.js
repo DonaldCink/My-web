@@ -3,6 +3,7 @@ const mobileNav = document.getElementsByClassName("mobile-nav")[0];
 const bars = document.getElementsByClassName("bar");
 const body = document.body;
 const mobileLinks = document.getElementsByClassName("mobile-link");
+const langBtns = document.querySelectorAll('.lang');
 
 toggleButton.addEventListener('click', () => {
     mobileNav.classList.toggle('active');
@@ -46,4 +47,3 @@ for (let i = 0; i < mobileLinks.length; i++){ //If click on a link enable scroll
         }
     });
 }
-
