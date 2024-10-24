@@ -179,6 +179,10 @@ header h1{
     cursor: pointer;
     text-decoration: none;
     color: white;
+    transition: all 300ms;
+}
+.lang:hover{
+    transform: scale(1.2);
 }
 .lang.current{
     background-color: white;
@@ -300,9 +304,11 @@ nav a{
     display: flex;
     width: fit-content;
     align-items: center;
+    
+    transition: all 300ms;
 }
 #CV-btn:hover{
-    background-color: #d40b3a;
+    transform: scale(1.2);
 }
 #CV-btn-wrap img{
     width: 1.5rem;
