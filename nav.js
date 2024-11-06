@@ -15,7 +15,7 @@ toggleButton.addEventListener('click', () => {
     if (mobileNav.classList.contains('active')) {
        
         for (let i = 0; i < bars.length; i++) {
-            bars[i].style.backgroundColor = "#1a1a1a"; // Hover color
+            bars[i].style.backgroundColor = "#1a1a1a"; // Change color
         }
 
         body.style.overflow = 'hidden'; //When mobile nav active disable scroll
@@ -23,7 +23,7 @@ toggleButton.addEventListener('click', () => {
     else {
 
         for (let i = 0; i < bars.length; i++) {
-            bars[i].style.backgroundColor = "white"; // Hover color
+            bars[i].style.backgroundColor = "white"; // Change color back
         }
 
         body.style.overflow = 'auto';
@@ -38,12 +38,12 @@ for (let i = 0; i < mobileLinks.length; i++){ //If click on a link enable scroll
         }
 
         if (mobileNav.classList.contains('active')) {
-            mobileNav.classList.toggle('active');
+            mobileNav.classList.toggle('active'); //Hide nav
         }
-        body.style.overflow = 'auto';
+        body.style.overflow = 'auto'; //Enable scroll
 
         for (let i = 0; i < bars.length; i++) {
-            bars[i].style.backgroundColor = "white"; //Initial color white
+            bars[i].style.backgroundColor = "white"; //Change color to white
         }
     });
 }

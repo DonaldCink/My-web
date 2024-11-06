@@ -154,6 +154,17 @@ header h1{
     font-size: 7rem;
     text-wrap: wrap;
     text-align: center;
+    animation: title-load 1s ease-in 500ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes title-load{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .nav-wrap{
     display: flex;
@@ -161,6 +172,15 @@ header h1{
     margin: 0  auto;
     justify-content: space-between;
     padding-top: 5%;
+    animation: nav-load 500ms ease-in ;
+}
+@keyframes nav-load{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 /*Language toggle*/
 .lang-toggle{
